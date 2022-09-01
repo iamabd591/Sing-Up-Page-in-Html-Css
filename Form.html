@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<link rel="stylesheet" href="Style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<form  action="#" method="post" class="login-form">
+    <h1>Login</h1>
+
+    <div class="txt">
+        <input type="text" >
+        <span data-placeholder="UserNmae"></span>
+    </div>
+
+    <div class="txt">
+        <input type="password" >
+        <span data-placeholder="Password"></span>
+    </div>
+
+<input type="submit" value="Login" class="login-btn">
+
+<div class="bottom">
+    Don't Have Account<a href="#">Sign up</a>
+</div>
+</form>
+
+<script type="text/javascript">
+    $(".txt input").on("focus",function()
+    {
+        $(this).addClass("focus");
+    });
+
+    $(".txt input").on("blur",function()
+    {
+        if($(this).val()=="")
+        $(this).removeClass("focus");
+    });
+</script>
+</body>
+</html>
